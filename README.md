@@ -3,7 +3,7 @@ Responsive website layout made entirely with grid.
 
 The site supports mobile, tablet, and desktop sizes.
 
-HTML, CSS.
+HTML, CSS, JS.
 
 ***
 ### [Live Website](https://gianluigivitale.github.io/css-grid-website/)
