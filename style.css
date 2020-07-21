@@ -99,7 +99,7 @@ img {
     display: grid;
     grid-gap: 20px;
     list-style: none;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 .menu a {
@@ -201,6 +201,70 @@ img {
 .gallery h2:after {
     background: linear-gradient(to right, var(--yellow), transparent);
 }
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 1200px) {
+    .menu {
+        order: -1;
+        perspective: 800px;
+    }
+
+    .menu ul {
+        max-height: 0;
+        overflow: hidden;
+        transform: rotateX(90deg);
+        transition: 0.5s;
+    }
+
+    [aria-controls="menu-list"] {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    [aria-expanded="true"] ~ ul {
+        display: grid;
+        max-height: 500px;
+        transform: rotate(0);
+    }
+
+    [aria-expanded="false"] .close {
+        display: none;
+    }
+
+    [aria-expanded="true"] .open {
+        display: none;
+    }
+
+    [aria-expanded="true"] .close {
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .top {
+        grid-template-areas:
+            "hero hero"
+            "cta1 cta2"
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .top {
+        grid-template-areas:
+            "hero"
+            "cta1"
+            "cta2"
+    }
+}
+
+
+
 
 
 
